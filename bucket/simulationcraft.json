@@ -15,6 +15,22 @@
             "extract_dir": "simc-1026.01.2ac1a41-winarm64"
         }
     },
+    "checkver": {
+        "url": "http://downloads.simulationcraft.org/nightly/?C=M;O=D",
+        "regex": "simc-(?<version>\\d+\\.\\d+\\.\\w+)-"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "http://downloads.simulationcraft.org/nightly/simc-$version-win64.7z",
+                "extract_dir": "simc-$version-win64"
+            },
+            "32bit": {
+                "url": "http://downloads.simulationcraft.org/nightly/simc-$version-winarm64.7z",
+                "extract_dir": "simc-$version-winarm64"
+            }
+        }
+    },
     "shortcuts": [
         [
             "SimulationCraft.exe",
